@@ -271,10 +271,7 @@ export default function Legal() {
               <strong>Groq:</strong> AI inference provider. Submitted content is
               processed through Groq's API. Subject to Groq's Privacy Policy.
             </p>
-            <p style={pStyle}>
-              <strong>Supabase:</strong> Database hosting. Data is stored on
-              Supabase infrastructure.
-            </p>
+            
             <p style={pStyle}>
               <strong>Vercel:</strong> Hosting provider. Subject to Vercel's
               Privacy Policy.
