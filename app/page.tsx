@@ -502,7 +502,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 boxShadow: "0 8px 30px rgba(238,9,121,0.35)",
               }}
             >
-              {previewLoading ? "Calling 3 critics..." : "Roast my site — free"}
+              {previewLoading ? "Calling 3 critics..." : "Try free — 3 critics"}
             </button>
             <p
               style={{
