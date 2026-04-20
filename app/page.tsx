@@ -150,8 +150,8 @@ async function runBatchedAnalysis(
     targetInfo.url || "(not provided)"
   }\nDescription: ${targetInfo.description || "(not provided)"}`;
   const results: any[] = [];
-  const BATCH_SIZE = 25,
-    BATCH_DELAY = 1500;
+  const BATCH_SIZE = 10,
+    BATCH_DELAY = 2000;
   for (let i = 0; i < ALL_PERSONAS.length; i += BATCH_SIZE) {
     const wave = ALL_PERSONAS.slice(i, i + BATCH_SIZE);
     const waveResults = await Promise.all(
@@ -1398,37 +1398,45 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
               }}
             >
               <div
-                style={{
-                  fontSize: "22px",
-                  fontWeight: "900",
-                  color: "#fff",
-                  marginBottom: "8px",
-                }}
-              >
-                Get your AI Fix Plan
-              </div>
-              <div
-                style={{
-                  fontSize: "13px",
-                  color: "rgba(255,255,255,0.4)",
-                  marginBottom: "24px",
-                  fontFamily: "monospace",
-                }}
-              >
-                100 critics found the problems. Now fix them.
-                <br />
-                <strong style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Normally $20. Right now: +$10.
-                </strong>
-              </div>
-              <button
-                onClick={handleUpsell}
-                style={{
-                  ...gradBtn({ padding: "16px 44px", fontSize: "15px" }),
-                }}
-              >
-                ⚡ GET MY FIX PLAN — $10
-              </button>
+  style={{
+    fontSize: "22px",
+    fontWeight: "900",
+    color: "#fff",
+    marginBottom: "8px",
+  }}
+>
+  Get your AI Fix Plan
+</div>
+<div
+  style={{
+    fontSize: "13px",
+    color: "rgba(255,255,255,0.4)",
+    marginBottom: "12px",
+    fontFamily: "monospace",
+    lineHeight: 1.8,
+  }}
+>
+  100 critics found the problems. Now fix them.
+</div>
+<div
+  style={{
+    fontSize: "13px",
+    marginBottom: "28px",
+    fontFamily: "monospace",
+  }}
+>
+  <strong style={{ color: "rgba(255,255,255,0.7)" }}>
+    Normally $20. Right now: +$10.
+  </strong>
+</div>
+<button
+  onClick={handleUpsell}
+  style={{
+    ...gradBtn({ padding: "16px 44px", fontSize: "15px" }),
+  }}
+>
+  ⚡ GET MY FIX PLAN — $10
+</button>
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
               <button
@@ -1448,25 +1456,23 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 ← NEW ANALYSIS
               </button>
               <button
-                onClick={() => {
-                  if (window.confirm("Request a full refund?")) {
-                    alert("✓ Refund requested. Returns in 5–10 minutes.");
-                    reset();
-                  }
-                }}
-                style={{
-                  padding: "16px 20px",
-                  background: "transparent",
-                  border: "1.5px solid rgba(255,255,255,0.12)",
-                  borderRadius: "12px",
-                  color: "rgba(255,255,255,0.7)",
-                  fontSize: "11px",
-                  fontFamily: "monospace",
-                  cursor: "pointer",
-                }}
-              >
-                ↩ Refund
-              </button>
+  onClick={() => { if (window.confirm("Request a full refund?")) { alert("✓ Refund requested. Returns in 5–10 minutes."); reset(); }}}
+  style={{
+    padding: "16px 20px",
+    background: "transparent",
+    border: "1.5px solid rgba(255,255,255,0.25)",
+    borderRadius: "12px",
+    color: "rgba(255,255,255,0.6)",
+    fontSize: "14px",
+    fontFamily: "Georgia, serif",
+    fontStyle: "italic",
+    cursor: "pointer",
+    transition: "all 0.2s",
+    letterSpacing: "0.5px",
+  }}
+>
+  ↩ Refund
+</button>
             </div>
           </div>
         )}
