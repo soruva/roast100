@@ -52,7 +52,7 @@ export default function Legal() {
 
   const dateStyle: any = {
     fontSize: "12px",
-    color: "#aaa",
+    color: "#555",
     fontFamily: "monospace",
     letterSpacing: "2px",
     marginBottom: "48px",
@@ -355,7 +355,7 @@ export default function Legal() {
             href="/"
             style={{
               fontSize: "13px",
-              color: "#aaa",
+              color: "#ee0979",
               fontFamily: "monospace",
               textDecoration: "none",
               letterSpacing: "1px",
