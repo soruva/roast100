@@ -167,10 +167,10 @@ export default function Legal() {
 
             <h2 style={h2Style}>3. Payment</h2>
             <p style={pStyle}>
-              The core Roast service is priced at $5 USD as a one-time payment.
-              An optional Fix Plan is available for an additional $10 USD. All
-              payments are processed securely by Stripe. By completing payment,
-              you authorize Roast100 to charge your selected payment method.
+              The core Roast service is priced at $5 USD as a one-time payment. 
+              An optional Fix Plan is available for an additional $10 USD. A Pro 
+              subscription is available at $49 USD per month, billed monthly, and 
+              can be cancelled at any time. All payments are processed securely by Stripe.
             </p>
 
             <h2 style={h2Style}>4. Acceptable Use</h2>
