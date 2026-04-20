@@ -556,7 +556,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                     </div>
                     <div
                       style={{
-                        background: "rgba(255,255,255,0.08)",
+                        background: "rgba(255,255,255,0.4)",
                         borderRadius: "100px",
                         padding: "10px 16px",
                         display: "flex",
@@ -661,7 +661,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                     <p
                       style={{
                         fontSize: "11px",
-                        color: "rgba(255,255,255,0.35)",
+                        color: "rgba(255,255,255,0.75)",
                         margin: 0,
                         fontFamily: "monospace",
                       }}
@@ -737,7 +737,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 <div
                   style={{
                     fontSize: "14px",
-                    color: "rgba(255,255,255,0.35)",
+                    color: "rgba(255,255,255,0.75)",
                     marginBottom: "28px",
                     lineHeight: 1.7,
                     fontFamily: "monospace",
@@ -773,7 +773,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        color: "rgba(255,255,255,0.08)",
+                        color: "rgba(255,255,255,0.4)",
                         fontFamily: "Georgia, serif",
                         fontStyle: "italic",
                         fontWeight: "900",
@@ -1524,7 +1524,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
         style={{
           textAlign: "center",
           padding: "40px 24px",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
+          borderTop: "1px solid rgba(255,255,255,0.4)",
           marginTop: "40px",
         }}
       >
