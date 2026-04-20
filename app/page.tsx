@@ -533,7 +533,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 style={{
                   fontSize: "10px",
                   letterSpacing: "3px",
-                  color: "rgba(255,255,255,0.3)",
+                  color: "rgba(255,255,255,0.7)",
                   fontFamily: "monospace",
                   marginBottom: "20px",
                   textAlign: "center",
@@ -789,7 +789,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.06)",
                       fontSize: "10px",
-                      color: "rgba(255,255,255,0.15)",
+                      color: "rgba(255,255,255,0.5)",
                       fontFamily: "monospace",
                       display: "flex",
                       alignItems: "center",
@@ -834,7 +834,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                       key={t}
                       style={{
                         fontSize: "11px",
-                        color: "rgba(255,255,255,0.18)",
+                        color: "rgba(255,255,255,0.6)",
                         fontFamily: "monospace",
                       }}
                     >
@@ -847,7 +847,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                   style={{
                     background: "transparent",
                     border: "none",
-                    color: "rgba(255,255,255,0.15)",
+                    color: "rgba(255,255,255,0.5)",
                     fontSize: "11px",
                     fontFamily: "monospace",
                     cursor: "pointer",
@@ -1063,7 +1063,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                     background:
                       activeTab === tab
                         ? "linear-gradient(135deg,#ff6b00,#ee0979)"
-                        : "rgba(255,255,255,0.15)",
+                        : "rgba(255,255,255,0.5)",
                     border: "none",
                     color: activeTab === tab ? "#fff" : "rgba(255,255,255,0.7)",
                   }}
@@ -1432,7 +1432,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 style={{
                   flex: 1,
                   padding: "16px",
-                  background: "rgba(255,255,255,0.15)",
+                  background: "rgba(255,255,255,0.5)",
                   border: "1.5px solid rgba(255,255,255,0.4)",
                   borderRadius: "12px",
                   color: "#fff",
@@ -1455,7 +1455,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                   background: "transparent",
                   border: "1.5px solid rgba(255,255,255,0.12)",
                   borderRadius: "12px",
-                  color: "rgba(255,255,255,0.3)",
+                  color: "rgba(255,255,255,0.7)",
                   fontSize: "11px",
                   fontFamily: "monospace",
                   cursor: "pointer",
@@ -1498,7 +1498,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
               style={{
                 width: "100%",
                 padding: "16px",
-                background: "rgba(255,255,255,0.15)",
+                background: "rgba(255,255,255,0.5)",
                 border: "1.5px solid rgba(255,255,255,0.4)",
                 borderRadius: "12px",
                 color: "#fff",
@@ -1555,7 +1555,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
             href="/legal"
             style={{
               fontSize: "11px",
-              color: "rgba(255,255,255,0.3)",
+              color: "rgba(255,255,255,0.7)",
               fontFamily: "monospace",
               letterSpacing: "1px",
               textDecoration: "none",
@@ -1567,7 +1567,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
             href="/legal"
             style={{
               fontSize: "11px",
-              color: "rgba(255,255,255,0.3)",
+              color: "rgba(255,255,255,0.7)",
               fontFamily: "monospace",
               letterSpacing: "1px",
               textDecoration: "none",
@@ -1579,7 +1579,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
             href="/legal"
             style={{
               fontSize: "11px",
-              color: "rgba(255,255,255,0.3)",
+              color: "rgba(255,255,255,0.7)",
               fontFamily: "monospace",
               letterSpacing: "1px",
               textDecoration: "none",
@@ -1591,7 +1591,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
         <div
           style={{
             fontSize: "11px",
-            color: "rgba(255,255,255,0.15)",
+            color: "rgba(255,255,255,0.5)",
             fontFamily: "monospace",
             letterSpacing: "1px",
           }}
@@ -1602,4 +1602,3 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
     </div>
   );
 }
-
