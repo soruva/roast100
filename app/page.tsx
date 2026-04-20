@@ -107,26 +107,16 @@ async function callGroq(
 ): Promise<any> {
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(
-        "https://api.groq.com/openai/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
-          },
-          body: JSON.stringify({
-            model: "llama-3.1-8b-instant",
-            max_tokens: 200,
-            temperature: 0.95,
-            response_format: { type: "json_object" },
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: userContent },
-            ],
-          }),
-        }
-      );
+      const res = await fetch("/api/roast", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          systemPrompt,
+          userContent,
+        }),
+      });
       if (res.status === 429) {
         await new Promise((r) => setTimeout(r, 1000 * Math.pow(2, attempt)));
         continue;
