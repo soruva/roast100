@@ -99,7 +99,7 @@ export default function Legal() {
         <span
           style={{
             fontSize: "11px",
-            color: "rgba(255,255,255,0.3)",
+            color: "rgba(255,255,255,0.8)",
             fontFamily: "monospace",
             letterSpacing: "2px",
           }}
