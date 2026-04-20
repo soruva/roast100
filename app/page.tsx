@@ -799,7 +799,10 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                   </div>
                 </div>
                 <button
-                  onClick={handlePayment}
+                  onClick={() =>
+                    (window.location.href =
+                      "https://buy.stripe.com/4gMdR823H2qC1Pe9lLb3q07")
+                  }
                   style={{
                     padding: "18px 56px",
                     background: "linear-gradient(135deg,#ff6b00,#ee0979)",
@@ -1430,7 +1433,10 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 </strong>
               </div>
               <button
-                onClick={handleUpsell}
+                onClick={() =>
+                  (window.location.href =
+                    "https://buy.stripe.com/7sYbJ0gYB5CO65u55vb3q08")
+                }
                 style={{
                   ...gradBtn({ padding: "16px 44px", fontSize: "15px" }),
                 }}
