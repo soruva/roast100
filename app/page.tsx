@@ -814,7 +814,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                     boxShadow: "0 8px 40px rgba(238,9,121,0.4)",
                   }}
                 >
-                  Unlock all 97 — $5
+                  Unlock all 97 · $5
                 </button>
                 <div
                   style={{
@@ -845,13 +845,17 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                 <button
                   onClick={() => setPhase("input")}
                   style={{
-                    background: "transparent",
-                    border: "none",
-                    color: "rgba(255,255,255,0.5)",
-                    fontSize: "11px",
+                    background: "rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    borderRadius: "100px",
+                    color: "rgba(255,255,255,0.7)",
+                    fontSize: "12px",
                     fontFamily: "monospace",
                     cursor: "pointer",
                     marginTop: "16px",
+                    letterSpacing: "1px",
+                    padding: "10px 24px",
+                    transition: "all 0.2s",
                   }}
                 >
                   ← try a different url
