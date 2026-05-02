@@ -1574,7 +1574,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
           marginTop: "40px",
         }}
       >
-        <div
+        href="/"
           style={{
             fontFamily: "Georgia, serif",
             fontStyle: "italic",
@@ -1584,10 +1584,13 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             marginBottom: "16px",
+            display: "block",
+            textDecoration: "none",
+            cursor: "pointer",
           }}
         >
           Roast100
-        </div>
+        </a>
         <div
           style={{
             display: "flex",
