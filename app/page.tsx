@@ -1336,12 +1336,6 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
     ))}
   </div>
 )}
-                  gap: "6px",
-                  marginBottom: "10px",
-                  maxHeight: "420px",
-                  overflowY: "auto",
-                }}
-              >
                 {report.valid.map((r: any, i: number) => (
                   <div
                     key={i}
