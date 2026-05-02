@@ -226,6 +226,14 @@ export default function Roast100() {
       return new URLSearchParams(window.location.search).get("key") || "";
     return "";
   });
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+    const paid = new URLSearchParams(window.location.search).get("paid");
+    if (paid === "true" && url) {
+      handlePayment();
+    }
+  }
+}, []);
   const [previewResults, setPreviewResults] = useState<any[]>([]);
   const [previewLoading, setPreviewLoading] = useState(false);
   const [progress, setProgress] = useState({ completed: 0, total: 100 });
