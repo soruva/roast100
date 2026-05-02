@@ -248,6 +248,7 @@ export default function Roast100() {
   const [upsellPlan, setUpsellPlan] = useState<any>(null);
   const [elapsed, setElapsed] = useState<any>(0);
   const [copied, setCopied] = useState(false);
+  const [sessionId, setSessionId] = useState("");
   const [activeTab, setActiveTab] = useState("overview");
   const timerRef = useRef<any>(null);
   const startRef = useRef<any>(null);
