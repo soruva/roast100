@@ -228,13 +228,15 @@ export default function Roast100() {
   });
   useEffect(() => {
   if (typeof window !== "undefined") {
-    const paid = new URLSearchParams(window.location.search).get("paid");
-    if (paid === "true") {
+    const params = new URLSearchParams(window.location.search);
+    const sessionId = params.get("session_id");
+    if (sessionId) {
       const savedUrl = localStorage.getItem("roast_url") || "";
       const savedDesc = localStorage.getItem("roast_description") || "";
       if (savedUrl || savedDesc) {
         setUrl(savedUrl);
         setDescription(savedDesc);
+        setSessionId(sessionId);
         setTimeout(() => handlePayment(), 500);
       }
     }
