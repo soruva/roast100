@@ -266,6 +266,8 @@ export default function Roast100() {
 
   const runPreview = async () => {
     if (!url.trim() && !description.trim()) return;
+    localStorage.setItem("roast_url", url);
+    localStorage.setItem("roast_description", description);
     setPreviewLoading(true);
     setPreviewResults([]);
     setPhase("hook");
