@@ -1336,41 +1336,6 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
     ))}
   </div>
 )}
-                {report.valid.map((r: any, i: number) => (
-                  <div
-                    key={i}
-                    style={{
-                      ...card,
-                      padding: "12px 8px",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: "20px",
-                        fontWeight: "900",
-                        background: "linear-gradient(135deg,#ff6b00,#ee0979)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        fontFamily: "Georgia, serif",
-                        fontStyle: "italic",
-                      }}
-                    >
-                      {r.score}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "9px",
-                        color: "#aaa",
-                        fontFamily: "monospace",
-                      }}
-                    >
-                      {r.role.split(" ").slice(-1)[0]}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
             <div style={{ ...card, padding: "20px", marginBottom: "10px" }}>
               <div
                 style={{
