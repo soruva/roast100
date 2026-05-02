@@ -1574,7 +1574,8 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
           marginTop: "40px",
         }}
       >
-        href="/"
+        
+          href="/"
           style={{
             fontFamily: "Georgia, serif",
             fontStyle: "italic",
@@ -1600,7 +1601,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
             marginBottom: "16px",
           }}
         >
-          <a
+          
             href="/legal"
             style={{
               fontSize: "11px",
@@ -1612,7 +1613,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
           >
             Terms of Service
           </a>
-          <a
+          
             href="/legal"
             style={{
               fontSize: "11px",
@@ -1624,7 +1625,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
           >
             Privacy Policy
           </a>
-          <a
+          
             href="/legal"
             style={{
               fontSize: "11px",
