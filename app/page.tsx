@@ -1291,10 +1291,51 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
               </div>
             )}
             {activeTab === "all" && (
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fill,minmax(110px,1fr))",
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "6px",
+      marginBottom: "10px",
+      maxHeight: "420px",
+      overflowY: "auto",
+    }}
+  >
+    {report.valid.map((r: any, i: number) => (
+      <div
+        key={i}
+        style={{
+          ...card,
+          padding: "12px 16px",
+          display: "flex",
+          alignItems: "flex-start",
+          gap: "12px",
+        }}
+      >
+        <div style={{
+          fontSize: "20px",
+          fontWeight: "900",
+          background: "linear-gradient(135deg,#ff6b00,#ee0979)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          fontFamily: "Georgia, serif",
+          fontStyle: "italic",
+          minWidth: "32px",
+        }}>
+          {r.score}
+        </div>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: "11px", color: "#555", fontWeight: "700", fontFamily: "monospace", marginBottom: "3px" }}>
+            {r.role}
+          </div>
+          <div style={{ fontSize: "12px", color: "#888", fontStyle: "italic", lineHeight: 1.5 }}>
+            "{r.roast}"
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
                   gap: "6px",
                   marginBottom: "10px",
                   maxHeight: "420px",
