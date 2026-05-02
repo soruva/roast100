@@ -1566,88 +1566,14 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
         @keyframes typingDot { 0%,60%,100%{transform:translateY(0);opacity:0.4} 30%{transform:translateY(-6px);opacity:1} }
       `}</style>
     {/* Footer */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "40px 24px",
-          borderTop: "1px solid rgba(255,255,255,0.4)",
-          marginTop: "40px",
-        }}
-      >
-        
-          href="/"
-          style={{
-            fontFamily: "Georgia, serif",
-            fontStyle: "italic",
-            fontWeight: "900",
-            fontSize: "18px",
-            background: "linear-gradient(135deg,#ff6b00,#ee0979)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            marginBottom: "16px",
-            display: "block",
-            textDecoration: "none",
-            cursor: "pointer",
-          }}
-        >
-          Roast100
-        </a>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-            marginBottom: "16px",
-          }}
-        >
-          
-            href="/legal"
-            style={{
-              fontSize: "11px",
-              color: "rgba(255,255,255,0.7)",
-              fontFamily: "monospace",
-              letterSpacing: "1px",
-              textDecoration: "none",
-            }}
-          >
-            Terms of Service
-          </a>
-          
-            href="/legal"
-            style={{
-              fontSize: "11px",
-              color: "rgba(255,255,255,0.7)",
-              fontFamily: "monospace",
-              letterSpacing: "1px",
-              textDecoration: "none",
-            }}
-          >
-            Privacy Policy
-          </a>
-          
-            href="/legal"
-            style={{
-              fontSize: "11px",
-              color: "rgba(255,255,255,0.7)",
-              fontFamily: "monospace",
-              letterSpacing: "1px",
-              textDecoration: "none",
-            }}
-          >
-            Refund Policy
-          </a>
+      <footer style={{ textAlign: "center", padding: "40px 24px", borderTop: "1px solid rgba(255,255,255,0.4)", marginTop: "40px" }}>
+        <a href="/" style={{ fontFamily: "Georgia, serif", fontStyle: "italic", fontWeight: "900", fontSize: "18px", background: "linear-gradient(135deg,#ff6b00,#ee0979)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: "16px", display: "block", textDecoration: "none", cursor: "pointer" }}>Roast100</a>   
+        <div style={{ display: "flex", justifyContent: "center", gap: "24px", flexWrap: "wrap", marginBottom: "16px" }}>
+          <a href="/legal" style={{ fontSize: "11px", color: "rgba(255,255,255,0.7)", fontFamily: "monospace", letterSpacing: "1px", textDecoration: "none" }}>Terms of Service</a>
+          <a href="/legal" style={{ fontSize: "11px", color: "rgba(255,255,255,0.7)", fontFamily: "monospace", letterSpacing: "1px", textDecoration: "none" }}>Privacy Policy</a>
+          <a href="/legal" style={{ fontSize: "11px", color: "rgba(255,255,255,0.7)", fontFamily: "monospace", letterSpacing: "1px", textDecoration: "none" }}>Refund Policy</a> 
         </div>
-        <div
-          style={{
-            fontSize: "11px",
-            color: "rgba(255,255,255,0.5)",
-            fontFamily: "monospace",
-            letterSpacing: "1px",
-          }}
-        >
-          © 2026 Roast100 · All rights reserved
-        </div>
+        <div style={{ fontSize: "11px", color: "rgba(255,255,255,0.5)", fontFamily: "monospace", letterSpacing: "1px" }}>© 2026 Roast100 · All rights reserved</div>
       </footer>
     </div>
   );
