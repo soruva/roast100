@@ -11,7 +11,10 @@ export async function POST(req: NextRequest) {
     line_items: [{
       price_data: {
         currency: "usd",
-        product_data: { name: "Roast100 — 100 AI Critics" },
+        product_data: { 
+  name: "Roast100 — 100 AI Critics",
+  description: "Get roasted by 100 AI critics in seconds. Brutal, fast, and actionable feedback for your website.",
+},
         unit_amount: 500,
       },
       quantity: 1,
