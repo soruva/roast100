@@ -31,7 +31,7 @@ export default function Legal() {
         {tab === "terms" && (
           <div>
             <h1 style={h1Style}>Terms of Service</h1>
-            <p style={dateStyle}>LAST UPDATED: APRIL 2026</p>
+            <p style={dateStyle}>LAST UPDATED: May 2026</p>
             <p style={pStyle}>By using Roast100 ("Service"), you agree to these Terms. Please read them carefully. If you do not agree, do not use the Service.</p>
 
             <h2 style={h2Style}>1. What Roast100 Does</h2>
@@ -70,7 +70,7 @@ export default function Legal() {
         {tab === "privacy" && (
           <div>
             <h1 style={h1Style}>Privacy Policy</h1>
-            <p style={dateStyle}>LAST UPDATED: APRIL 2026</p>
+            <p style={dateStyle}>LAST UPDATED: May 2026</p>
             <p style={pStyle}>Roast100 is committed to protecting your privacy. This policy explains what data we collect and how we use it.</p>
 
             <h2 style={h2Style}>1. Information We Collect</h2>
@@ -107,7 +107,7 @@ export default function Legal() {
         {tab === "refund" && (
           <div>
             <h1 style={h1Style}>Refund Policy</h1>
-            <p style={dateStyle}>LAST UPDATED: APRIL 2026</p>
+            <p style={dateStyle}>LAST UPDATED: May 2026</p>
             <p style={pStyle}>We want you to be satisfied with Roast100. If you are not happy with your results, we offer a hassle-free refund.</p>
 
             <h2 style={h2Style}>Full Refund — No Questions Asked</h2>
