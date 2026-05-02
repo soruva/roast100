@@ -300,16 +300,25 @@ export default function Roast100() {
   };
 
   const handlePayment = async () => {
-    setPhase("running");
-    setLiveResults([]);
-    const results = await runBatchedAnalysis(
-      apiKey,
-      { url, description },
-      handleProgress
-    );
-    setReport(aggregateResults(results));
-    setPhase("done");
-  };
+  setPhase("running");
+  setLiveResults([]);
+  const results = await runBatchedAnalysis(
+    apiKey,
+    { url, description },
+    handleProgress
+  );
+  setReport(aggregateResults(results));
+  setPhase("done");
+
+  // 完了をSupabaseに記録
+  if (sessionId) {
+    await fetch("/api/complete", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sessionId }),
+    });
+  }
+};
 
   const handleUpsell = async () => {
     setPhase("upsell_running");
