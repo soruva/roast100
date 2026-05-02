@@ -103,6 +103,7 @@ async function callGroq(
   systemPrompt: string,
   userContent: string,
   apiKey: string,
+  sessionId: string = "",
   retries = 2
 ): Promise<any> {
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -115,6 +116,7 @@ async function callGroq(
         body: JSON.stringify({
           systemPrompt,
           userContent,
+          sessionId,
         }),
       });
       if (res.status === 429) {
