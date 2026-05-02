@@ -1565,7 +1565,7 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
         @keyframes fadeIn { from{opacity:0} to{opacity:1} }
         @keyframes typingDot { 0%,60%,100%{transform:translateY(0);opacity:0.4} 30%{transform:translateY(-6px);opacity:1} }
       `}</style>
-      {/* Footer */}
+    {/* Footer */}
       <footer
         style={{
           textAlign: "center",
