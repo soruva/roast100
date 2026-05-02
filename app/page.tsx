@@ -140,8 +140,8 @@ async function runBatchedAnalysis(
     targetInfo.url || "(not provided)"
   }\nDescription: ${targetInfo.description || "(not provided)"}`;
   const results: any[] = [];
-  const BATCH_SIZE = 5,
-    BATCH_DELAY = 3000;
+  const BATCH_SIZE = 3,
+    BATCH_DELAY = 4000;
   for (let i = 0; i < ALL_PERSONAS.length; i += BATCH_SIZE) {
     const wave = ALL_PERSONAS.slice(i, i + BATCH_SIZE);
     const waveResults = await Promise.all(
