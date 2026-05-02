@@ -808,10 +808,15 @@ Respond in JSON: {"fix_plan": "Prioritized fix plan with: 1) Top 3 critical fixe
                   </div>
                 </div>
                 <button
-                  onClick={() =>
-                    (window.location.href =
-                      "https://buy.stripe.com/4gMdR823H2qC1Pe9lLb3q07")
-                  }
+                  onClick={async () => {
+  const res = await fetch("/api/checkout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ url, description }),
+  });
+  const { checkoutUrl } = await res.json();
+  window.location.href = checkoutUrl;
+}}
                   style={{
                     padding: "18px 56px",
                     background: "linear-gradient(135deg,#ff6b00,#ee0979)",
