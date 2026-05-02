@@ -2,37 +2,48 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
 export async function POST(req: NextRequest) {
-  const secret = process.env.STRIPE_WEBHOOK_SECRET;
+  const apiKey = process.env.GROQ_API_KEY;
   const supabaseUrl = process.env.SUPABASE_URL!;
   const supabaseKey = process.env.SUPABASE_ANON_KEY!;
-  const supabase = createClient(supabaseUrl, supabaseKey);
 
-  const body = await req.text();
-  const signature = req.headers.get("stripe-signature");
-
-  if (!signature || !secret) {
-    return NextResponse.json({ error: "Missing config" }, { status: 400 });
+  if (!apiKey) {
+    return NextResponse.json({ error: "API key not configured" }, { status: 500 });
   }
 
-  try {
-    const event = JSON.parse(body);
+  const { systemPrompt, userContent, sessionId } = await req.json();
 
-    if (event.type === "checkout.session.completed") {
-      const session = event.data.object;
-      const url = session.metadata?.url || "";
-      const description = session.metadata?.description || "";
+  // セッションIDがある場合はSupabaseで支払い確認
+  if (sessionId) {
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    const { data } = await supabase
+      .from("roasts")
+      .select("paid")
+      .eq("session_id", sessionId)
+      .single();
 
-      await supabase.from("roasts").insert({
-        session_id: session.id,
-        url,
-        description,
-        paid: true,
-        completed: false,
-      });
+    if (!data?.paid) {
+      return NextResponse.json({ error: "Payment not verified" }, { status: 403 });
     }
-
-    return NextResponse.json({ received: true });
-  } catch (err) {
-    return NextResponse.json({ error: "Webhook error" }, { status: 400 });
   }
+
+  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: "llama-3.1-8b-instant",
+      max_tokens: 200,
+      temperature: 0.95,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: userContent },
+      ],
+    }),
+  });
+
+  const data = await res.json();
+  return NextResponse.json(data);
 }
